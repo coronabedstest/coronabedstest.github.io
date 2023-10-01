@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CM Arvind Kejriwal has launched a simplified Dashboard for tracking the COVID-19 Care facilities available in Delhi">
+    <meta property="og:title" content="Delhi Government - COVID-19 Dashboard" />
+    <meta property="og:image" content="//pbs.twimg.com/profile_images/945853608389574656/REH_LpUJ_400x400.jpg">
+    <meta property="og:description" content="CM Arvind Kejriwal has launched a simplified Dashboard for tracking the COVID-19 Care facilities available in Delhi. Status of facilities in different Government and Private facilities in Delhi can be easily obtained through this dashboard">
+
+    <!-- Bootstrap CSS -->
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
+
+    <title>COVID-19 Dashboard - Delhi Government</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1KFF15DS6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-T1KFF15DS6');
+    </script>
+    <script src="covid-info.js"></script>
+    <style>
+        div.card-header {
+            font-size: 0.7em;
+        }
+        p.card-text {
+            font-size: 1.1em;
+        }
+    </style>
+
+  </head>
+  <body style="background-color: #f5f5f5ff;">
+      <div class="container">
+        <div class="text-center">
+            <!--
+            <h3>
+            <img src="static/images/delhi-government.png" class="img-fluid rounded float-left" alt="Delhi Government">
+            Corona Dashboard
+            <img src="static/images/delhi-cm-arvind-kejriwal.jpg" class="img-fluid rounded float-right" alt="Delhi CM - Arvind Kejriwal">
+            </h3>
+            -->
+            <img src="static/images/corona-dashboard-header.jpg" class="img-fluid" alt="Delhi Government Corona Dashboard">
+        </div>
+
+        <h4 class="text-center">COVID-19 Beds</h4>
+        <div class="row text-center">
+          <div class="col">
+            <a href="beds.html">
+              <div class="card text-white bg-primary mb-3 shadow">
+                <div class="card-header">Total</div>
+                <div class="card-body">
+                  <p class="card-text" id="beds_total">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="beds.html">
+              <div class="card text-dark bg-warning mb-3 shadow">
+                <div class="card-header">Occupied</div>
+                <div class="card-body">
+                  <p class="card-text" id="beds_occupied">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="beds.html">
+              <div class="card text-white bg-success mb-3 shadow">
+                <div class="card-header">Vacant</div>
+                <div class="card-body">
+                  <p class="card-text" id="beds_vacant">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <h4 class="text-center">COVID-19 ICU Beds with Ventilators</h4>
+        <div class="row text-center">
+          <div class="col">
+            <a href="ventilators.html">
+              <div class="card text-white bg-primary mb-3 shadow">
+                <div class="card-header">Total</div>
+                <div class="card-body">
+                  <p class="card-text" id="ventilators_total">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="ventilators.html">
+              <div class="card text-dark bg-warning mb-3 shadow">
+                <div class="card-header">Occupied</div>
+                <div class="card-body">
+                  <p class="card-text" id="ventilators_occupied">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="ventilators.html">
+              <div class="card text-white bg-success mb-3 shadow">
+                <div class="card-header">Vacant</div>
+                <div class="card-body">
+                  <p class="card-text" id="ventilators_vacant">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <h4 class="text-center">COVID-19 ICU Beds without Ventilators</h4>
+        <div class="row text-center">
+          <div class="col">
+            <a href="icu-beds-without-ventilators.html">
+              <div class="card text-white bg-primary mb-3 shadow">
+                <div class="card-header">Total</div>
+                <div class="card-body">
+                  <p class="card-text" id="icu_beds_without_ventilator_total">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="icu-beds-without-ventilators.html">
+              <div class="card text-dark bg-warning mb-3 shadow">
+                <div class="card-header">Occupied</div>
+                <div class="card-body">
+                  <p class="card-text" id="icu_beds_without_ventilator_occupied">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="icu-beds-without-ventilators.html">
+              <div class="card text-white bg-success mb-3 shadow">
+                <div class="card-header">Vacant</div>
+                <div class="card-body">
+                  <p class="card-text" id="icu_beds_without_ventilator_vacant">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <h4 class="text-center">Non-COVID-19 ICU Beds</h4>
+        <div class="row text-center">
+          <div class="col">
+            <a href="noncovid-icu-beds.html">
+              <div class="card text-white bg-primary mb-3 shadow">
+                <div class="card-header">Total</div>
+                <div class="card-body">
+                  <p class="card-text" id="noncovid_icu_beds_total">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="noncovid-icu-beds.html">
+              <div class="card text-dark bg-warning mb-3 shadow">
+                <div class="card-header">Occupied</div>
+                <div class="card-body">
+                  <p class="card-text" id="noncovid_icu_beds_occupied">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="noncovid-icu-beds.html">
+              <div class="card text-white bg-success mb-3 shadow">
+                <div class="card-header">Vacant</div>
+                <div class="card-body">
+                  <p class="card-text" id="noncovid_icu_beds_vacant">...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+            <small><b>Source:</b> Data reported by Nodal Officers of each Dedicated COVID-19 Hospital.</small>
+            <br />
+            <small><b>Last Updated At:</b> <span id="last_updated_at">...</span></small>
+        </div>
+
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!--
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha256-OFRAJNoaD8L3Br5lglV7VyLRf0itmoBzWUoM+Sji4/8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            var beds = gnctd_covid_data['beds']['All'];
+            $('#beds_total').text(beds['total']);
+            $('#beds_occupied').text(beds['occupied']);
+            $('#beds_vacant').text(beds['vacant']);
+
+            var ventilators = gnctd_covid_data['ventilators']['All'];
+            $('#ventilators_total').text(ventilators['total']);
+            $('#ventilators_occupied').text(ventilators['occupied']);
+            $('#ventilators_vacant').text(ventilators['vacant']);
+
+            var update_counts = function(group, counts) {
+                $('#'+group+'_total').text(counts['total']);
+                $('#'+group+'_occupied').text(counts['occupied']);
+                $('#'+group+'_vacant').text(counts['vacant']);
+            };
+            update_counts('icu_beds_without_ventilator', gnctd_covid_data['icu_beds_without_ventilator']['All']);
+            update_counts('noncovid_icu_beds', gnctd_covid_data['noncovid_icu_beds']['All']);
+
+            $('#last_updated_at').text(gnctd_covid_data['last_updated_at']);
+        });
+    </script>
+
+  </body>
+</html>
